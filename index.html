@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>haiderSY | مكتبة الألعاب</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>مكتبة ألعاب haiderSY</h1>
+    <p>أفضل الألعاب المجانية!</p>
+    <div class="actions">
+      <button onclick="toggleTheme()">تبديل الوضع</button>
+      <button onclick="showLogin()">دخول الإدمن</button>
+    </div>
+  </header>
+
+  <!-- نموذج الدخول -->
+  <div class="admin-login" id="adminLogin">
+    <input type="password" id="adminPassword" placeholder="كلمة مرور الإدمن" />
+    <button onclick="checkPassword()">دخول</button>
+  </div>
+
+  <!-- نموذج إضافة لعبة (يظهر فقط للإدمن) -->
+  <div class="add-game-form" id="addGameForm" style="display: none;">
+    <h2>إضافة لعبة جديدة</h2>
+    <input type="text" id="gameTitle" placeholder="اسم اللعبة" />
+    <input type="text" id="gameImage" placeholder="رابط صورة اللعبة" />
+    <input type="text" id="gameLink" placeholder="رابط اللعبة" />
+    <button onclick="addGame()">إضافة</button>
+  </div>
+
+  <main class="game-grid" id="gameGrid">
+    <!-- الألعاب تظهر هنا -->
+  </main>
+
+  <footer>
+    <p>© 2025 - haiderSY</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
